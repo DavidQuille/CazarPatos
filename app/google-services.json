@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "324261846383",
+    "project_id": "proyectocazarpatos-bedb4",
+    "storage_bucket": "proyectocazarpatos-bedb4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324261846383:android:467c08067726f8a10edc9a",
+        "android_client_info": {
+          "package_name": "com.david.quille.cazarpatos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwDp7iVUT597Ms2Q4UzGdhp5BQWEY_2qo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
