@@ -2,12 +2,19 @@
     <string name="app_name">Duck Hunter</string>
     <string name="hint_email">Enter your email</string>
     <string name="hint_password">Enter your password</string>
+    <string name="hint_confirm_password">Confirm your password</string>
     <string name="text_remember_me">Remember me</string>
     <string name="text_start_game">Start game</string>
     <string name="text_new_user">Create New user</string>
+    <string name="text_sign_up">Sign up</string>
+    <string name="text_back_to_login">Back to the login</string>
     <string name="error_email_required">Email is required</string>
+    <string name="error_email_invalid">Ponga un correo electrónico válido</string>
     <string name="error_password_required">Password is required</string>
     <string name="error_password_min_length">The password must have at least 3 characters</string>
+    <string name="error_password_min_length_6">la contraseña debe ser mínimo de 6 caracteres</string>
+    <string name="error_confirm_password_required">Confirm your password</string>
+    <string name="error_passwords_not_match">La contraseña no es igual</string>
 
     <string name="dialog_title_game_end">End of the game</string>
     <string name="dialog_message_congratulations">Congratulations!!\nYou hunted %1$d ducks</string>
@@ -24,5 +31,3 @@
 
 
 </resources>
-
-

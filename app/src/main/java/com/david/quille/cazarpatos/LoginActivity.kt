@@ -69,7 +69,9 @@ class LoginActivity : AppCompatActivity() {
             AutenticarUsuario(email, clave)
         }
         buttonNewUser.setOnClickListener{
-
+            // Registro
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
         mediaPlayer=MediaPlayer.create(this, R.raw.title_screen)
         mediaPlayer.start()
@@ -94,7 +96,7 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
     }
-        private fun validateRequiredData():Boolean{
+    private fun validateRequiredData():Boolean{
         val email = editTextEmail.text.toString()
         val password = editTextPassword.text.toString()
         if (email.isEmpty()) {
@@ -132,6 +134,18 @@ class LoginActivity : AppCompatActivity() {
             "" to ""
         }
         manejadorArchivo.SaveInformation(listadoAGrabar)
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra(EXTRA_LOGIN, currentUser.email)
+            startActivity(intent)
+            finish()
+        }
     }
 
 

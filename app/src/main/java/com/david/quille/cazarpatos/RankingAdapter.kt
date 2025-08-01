@@ -4,6 +4,7 @@ import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,6 +19,7 @@ class RankingAdapter(private val dataSet: ArrayList<Player>) : RecyclerView.Adap
         val textViewPosicion: TextView
         val textViewPatosCazados: TextView
         val textViewUsuario: TextView
+        val imageViewMedal: ImageView = view.findViewById(R.id.imageViewMedal)
         init {
             textViewPosicion = view.findViewById(R.id.textViewPosicion)
             textViewPatosCazados = view.findViewById(R.id.textViewPatosCazados)
@@ -52,6 +54,24 @@ class RankingAdapter(private val dataSet: ArrayList<Player>) : RecyclerView.Adap
             holder.textViewPosicion.text = position.toString()
             holder.textViewPatosCazados.text = dataSet[position-1].huntedDucks.toString()
             holder.textViewUsuario.text = dataSet[position-1].username
+
+            when (position) {
+                1 -> {
+                    holder.imageViewMedal.setImageResource(R.drawable.gold)
+                    holder.imageViewMedal.visibility = View.VISIBLE
+                }
+                2 -> {
+                    holder.imageViewMedal.setImageResource(R.drawable.silver)
+                    holder.imageViewMedal.visibility = View.VISIBLE
+                }
+                3 -> {
+                    holder.imageViewMedal.setImageResource(R.drawable.bronze)
+                    holder.imageViewMedal.visibility = View.VISIBLE
+                }
+                else -> {
+                    holder.imageViewMedal.visibility = View.GONE
+                }
+            }
         }
     }
     override fun getItemCount() = dataSet.size + 1

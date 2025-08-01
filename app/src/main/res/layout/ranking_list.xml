@@ -39,4 +39,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewPatosCazados"
         app:layout_constraintTop_toTopOf="@+id/textViewPatosCazados" />
+    <ImageView
+        android:id="@+id/imageViewMedal"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/textViewPosicion"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/app_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>

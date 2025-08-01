@@ -223,9 +223,14 @@ class MainActivity : AppCompatActivity() {
                 restartGame()
             }
             .setNegativeButton(getString(R.string.button_close)) { _, _ ->
-                // Dialog dismisses automatically
+
+                com.google.firebase.auth.FirebaseAuth.getInstance().signOut()
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+                finish()
             }
-            .setCancelable(false)  // Prevents closing on outside click
+            .setCancelable(false)
         builder.create().show()
     }
     private fun restartGame(){
@@ -344,6 +349,11 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_salir -> {
+
+                com.google.firebase.auth.FirebaseAuth.getInstance().signOut()
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
                 finish()
                 true
             }

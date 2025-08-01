@@ -38,6 +38,9 @@
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
             android:exported="false" />
         <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:exported="false"
